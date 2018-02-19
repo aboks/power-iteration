@@ -1,0 +1,29 @@
+{
+	"name": "aboks/power-iteration",
+	"description": "Implementation of the Power Iteration method for finding eigenvalues of a matrix, using math-php",
+	"minimum-stability": "stable",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Arnout Boks",
+			"email": "arnoutboks@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Aboks\\PowerIteration\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Aboks\\PowerIteration\\Tests\\": "test/"
+		}
+	},
+	"require": {
+		"php": "^7.1.0",
+		"markrogoyski/math-php": "^0.33.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.3.0"
+	}
+}
