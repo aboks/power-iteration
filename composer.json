@@ -3,6 +3,7 @@
 	"description": "Implementation of the Power Iteration method for finding eigenvalues of a matrix, using math-php",
 	"minimum-stability": "stable",
 	"license": "MIT",
+	"keywords": ["math", "mathematics", "eigenvalue", "eigenvector", "linear-algebra", "math-php"],
 	"authors": [
 		{
 			"name": "Arnout Boks",
