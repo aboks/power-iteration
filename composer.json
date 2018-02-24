@@ -22,7 +22,7 @@
 	},
 	"require": {
 		"php": "^7.1.0",
-		"markrogoyski/math-php": "^0.33.0"
+		"markrogoyski/math-php": "^0.38.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^6.3.0"
