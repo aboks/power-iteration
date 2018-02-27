@@ -28,6 +28,34 @@ var_dump($dominant_eigenpair->getEigenvalue()); // 2
 var_dump($dominant_eigenpair->getEigenvector()); // Vector([1, 0]), or a scalar multiple
 ```
 
+Customizations
+--------------
+
+### Stopping criterion
+
+By default, the power iteration runs for 1000 iterations. The stopping criterion can be altered by passing an instance of `StoppingCriterion` as the first argument to `PowerIteration`:
+```php
+<?php
+use Aboks\PowerIteration\PowerIteration;
+use Aboks\PowerIteration\StoppingCriterion\MaxIterations;
+use Aboks\PowerIteration\StoppingCriterion\EigenvectorTolerance;
+
+new PowerIteration(new MaxIterations(10));           // will stop after 10 iterations
+new PowerIteration(new EigenvectorTolerance(0.01));  // will stop when ‖Av - λv‖ < 0.01
+```
+
+### Scaling method
+
+To prevent overflow in case of very large eigenvalues (or underflow in case of small eigenvalues), the eigenvector estimates are scaled/normalized after each iteration. The final eigenvector estimate is also scaled using the same method. By default, the estimates are scaled to a unit vector based on the L2-norm. To use a different method, provide an instance of `ScalingMethod` as a second argument to `PowerIteration`:
+```php
+<?php
+use Aboks\PowerIteration\PowerIteration;
+use Aboks\PowerIteration\ScalingMethod\NormBased;
+use Aboks\PowerIteration\Norm\MaxNorm;
+
+new PowerIteration(null, new NormBased(new MaxNorm()));  // will scale to a unit vector based on the max-norm
+``` 
+
 Running tests
 -------------
 After installing dependencies (including development dependencies) using Composer, run
