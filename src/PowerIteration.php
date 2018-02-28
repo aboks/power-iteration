@@ -42,4 +42,11 @@ class PowerIteration
 
         return new Eigenpair($eigenvalue_approximation, $scaled_eigenvector_approximation);
     }
+
+    public function getLeastDominantEigenpair(Matrix $matrix): Eigenpair
+    {
+        $inverse_dominant_eigenpair = $this->getDominantEigenpair($matrix->inverse());
+        $least_dominant_eigenvalue = 1 / $inverse_dominant_eigenpair->getEigenvalue();
+        return new Eigenpair($least_dominant_eigenvalue, $inverse_dominant_eigenpair->getEigenvector());
+    }
 }
