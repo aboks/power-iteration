@@ -28,6 +28,27 @@ var_dump($dominant_eigenpair->getEigenvalue()); // 2
 var_dump($dominant_eigenpair->getEigenvector()); // Vector([1, 0]), or a scalar multiple
 ```
 
+Advanced usage
+--------------
+
+### Calculating the least dominant eigenpair
+
+In most situations, one is interested in the dominant eigenvalue and its corresponding eigenvector. It is also possible to calculate the least dominant eigenpair however: 
+```php
+<?php
+use Aboks\PowerIteration\PowerIteration;
+use MathPHP\LinearAlgebra\Matrix;
+
+$power_iteration = new PowerIteration();
+$dominant_eigenpair = $power_iteration->getLeastDominantEigenpair(new Matrix([
+    [2, 1],
+    [0, 1]
+ ]));
+var_dump($dominant_eigenpair->getEigenvalue()); // 1
+var_dump($dominant_eigenpair->getEigenvector()); // Vector([√2, -√2]), or a scalar multiple
+```
+
+
 Customizations
 --------------
 
