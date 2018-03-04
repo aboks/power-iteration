@@ -85,6 +85,10 @@ $ ./vendor/bin/phpunit
 ```
 from the project root dir.
 
+Contributing
+------------
+Contributions to this library are very welcome! Please make sure that your changes have sufficient test coverage, and that the code follows [PSR-2](https://www.php-fig.org/psr/psr-2/).
+
 Versioning
 ----------
 This project adheres to [Semantic Versioning](http://semver.org/).
