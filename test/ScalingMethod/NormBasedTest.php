@@ -4,16 +4,17 @@ namespace Aboks\PowerIteration\Tests\ScalingMethod;
 use Aboks\PowerIteration\Norm;
 use Aboks\PowerIteration\ScalingMethod\NormBased;
 use MathPHP\LinearAlgebra\Vector;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class NormBasedTest extends TestCase
 {
-    /** @var Norm|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var Norm|MockObject */
     private $norm;
     /** @var NormBased */
     private $scaling_method;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->norm = $this->createMock(Norm::class);
         $this->scaling_method = new NormBased($this->norm);

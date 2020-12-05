@@ -11,7 +11,7 @@ class MaxIterationsTest extends TestCase
     /** @var MaxIterations */
     private $stopping_criterion;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->stopping_criterion = new MaxIterations(42);
     }

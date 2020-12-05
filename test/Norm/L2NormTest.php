@@ -10,7 +10,7 @@ class L2NormTest extends TestCase
     /** @var L2Norm */
     private $l2norm;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->l2norm = new L2Norm();
     }

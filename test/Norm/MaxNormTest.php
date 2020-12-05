@@ -10,7 +10,7 @@ class MaxNormTest extends TestCase
     /** @var MaxNorm */
     private $max_norm;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->max_norm = new MaxNorm();
     }
