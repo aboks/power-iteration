@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aboks/power-iteration.svg?branch=master)](https://travis-ci.org/aboks/power-iteration)
+![Continuous Integration](https://github.com/aboks/power-iteration/workflows/Continuous%20Integration/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/aboks/power-iteration/v/stable)](https://packagist.org/packages/aboks/power-iteration)
 
 PowerIteration
