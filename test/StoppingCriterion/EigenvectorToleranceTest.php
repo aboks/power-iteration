@@ -11,7 +11,7 @@ class EigenvectorToleranceTest extends TestCase
     /** @var EigenvectorTolerance */
     private $stopping_criterion;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->stopping_criterion = new EigenvectorTolerance(0.1);
     }
