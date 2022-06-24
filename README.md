@@ -17,10 +17,10 @@ Basic usage
 ```php
 <?php
 use Aboks\PowerIteration\PowerIteration;
-use MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\MatrixFactory;
 
 $power_iteration = new PowerIteration();
-$dominant_eigenpair = $power_iteration->getDominantEigenpair(new Matrix([
+$dominant_eigenpair = $power_iteration->getDominantEigenpair(MatrixFactory::create([
     [2, 1],
     [0, 1]
  ]));
@@ -40,7 +40,7 @@ use Aboks\PowerIteration\PowerIteration;
 use MathPHP\LinearAlgebra\Matrix;
 
 $power_iteration = new PowerIteration();
-$dominant_eigenpair = $power_iteration->getLeastDominantEigenpair(new Matrix([
+$dominant_eigenpair = $power_iteration->getLeastDominantEigenpair(MatrixFactory::create([
     [2, 1],
     [0, 1]
  ]));

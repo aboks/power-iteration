@@ -2,7 +2,7 @@
 namespace Aboks\PowerIteration\Tests;
 
 use Aboks\PowerIteration\RayleighQuotient;
-use MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\Vector;
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +10,7 @@ class RayleighQuotientTest extends TestCase
 {
     public function testCalculatesTheRayleighQuotientOfAMatrixAndAVector()
     {
-        $A = new Matrix([
+        $A = MatrixFactory::create([
             [1, 2, 0],
             [-2, 1, 2],
             [1, 3, 1],
