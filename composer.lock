@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb21480802466a272f30b82d73791fc5",
+    "content-hash": "9dfd6652f863a0428aa82da3a2b7c01c",
     "packages": [
         {
             "name": "markrogoyski/math-php",
@@ -2108,5 +2108,5 @@
         "php": "^7.3 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
