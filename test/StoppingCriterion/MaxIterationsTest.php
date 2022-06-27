@@ -2,7 +2,7 @@
 namespace Aboks\PowerIteration\Tests\StoppingCriterion;
 
 use Aboks\PowerIteration\StoppingCriterion\MaxIterations;
-use MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use MathPHP\LinearAlgebra\Vector;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +18,7 @@ class MaxIterationsTest extends TestCase
 
     public function testContinuesIfTheMaximumNumberOfIterationsIsNotReached()
     {
-        $matrix = new Matrix([
+        $matrix = MatrixFactory::create([
             [2, 1],
             [1, 2]
         ]);
@@ -35,7 +35,7 @@ class MaxIterationsTest extends TestCase
 
     public function testStopsIfTheMaximumNumberOfIterationsIsReached()
     {
-        $matrix = new Matrix([
+        $matrix = MatrixFactory::create([
             [2, 1],
             [1, 2]
         ]);

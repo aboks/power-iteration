@@ -2,7 +2,7 @@
 namespace Aboks\PowerIteration\Tests;
 
 use Aboks\PowerIteration\PowerIteration;
-use MathPHP\LinearAlgebra\Matrix;
+use MathPHP\LinearAlgebra\MatrixFactory;
 use PHPUnit\Framework\TestCase;
 
 class PowerIterationIntegrationTest extends TestCase
@@ -10,7 +10,7 @@ class PowerIterationIntegrationTest extends TestCase
 
     public function testReturnsTheDominantEigenpairForTheGivenMatrix()
     {
-        $matrix = new Matrix([
+        $matrix = MatrixFactory::create([
             [2, 1],
             [0, 1]
         ]);
@@ -25,7 +25,7 @@ class PowerIterationIntegrationTest extends TestCase
 
     public function testScalesTheReturnedEigenvectorApproximation()
     {
-        $matrix = new Matrix([
+        $matrix = MatrixFactory::create([
             [2, 1],
             [1, 2]
         ]);
@@ -36,7 +36,7 @@ class PowerIterationIntegrationTest extends TestCase
 
     public function testCanReturnTheLeastDominantEigenpairForTheGivenMatrix()
     {
-        $matrix = new Matrix([
+        $matrix = MatrixFactory::create([
             [2, 1],
             [0, 1]
         ]);
